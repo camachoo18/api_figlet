@@ -14,8 +14,8 @@ app.get('/fonts', (req, res) => {
 
 // Endpoint para convertir texto
 app.get('/convert', (req, res) => {
-    const text = req.query.text || '';
-    const font = req.query.font || 'Standard';
+    const text = req.query.text 
+    const font = req.query.font 
 
     figlet.text(text, { font: font }, (err, result) => {
         res.send(result);
